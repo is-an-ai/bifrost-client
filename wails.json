@@ -4,10 +4,25 @@
   "outputfilename": "bifrost-client",
   "frontend:install": "npm install",
   "frontend:build": "npm run build",
+  "frontend:dev": "npm run dev",
   "frontend:dev:watcher": "npm run dev",
-  "frontend:dev:serverUrl": "auto",
+  "frontend:dir": "frontend",
   "author": {
-    "name": "chungjung-d",
-    "email": "chungjung.d@gmail.com"
+    "name": "chungjung",
+    "email": "chungjung@is-an.ai"
+  },
+  "info": {
+    "companyName": "is-an.ai",
+    "productName": "Bifrost Client",
+    "productVersion": "1.0.0",
+    "copyright": "Copyright © 2025 is-an.ai",
+    "comments": "Built using Wails (https://wails.io)",
+    "protocols": [
+      {
+        "scheme": "bifrost",
+        "description": "Bifrost Client Protocol",
+        "role": "Editor"
+      }
+    ]
   }
 }
