@@ -2,17 +2,21 @@ package main
 
 import (
 	"context"
-	"fmt"
+
+	"bifrost-client/internal/auth"
 )
 
 // App struct
 type App struct {
-	ctx context.Context
+	ctx  context.Context
+	auth *auth.Service
 }
 
 // NewApp creates a new App application struct
-func NewApp() *App {
-	return &App{}
+func NewApp(authService *auth.Service) *App {
+	return &App{
+		auth: authService,
+	}
 }
 
 // startup is called when the app starts. The context is saved
@@ -21,7 +25,8 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
+
+// CheckAndStartLogin checks authentication status and starts login if needed
+func (a *App) CheckAndStartLogin() error {
+	return a.auth.CheckAndStartLogin(a.ctx)
 }
