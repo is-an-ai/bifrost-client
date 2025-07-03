@@ -9,6 +9,8 @@ require (
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
+	github.com/inconshreveable/muxado v0.0.0-20160802230925-fc182d90f26e // indirect
+	github.com/inconshreveable/ngrok v0.0.0-20240426181117-61d48289f3bf // indirect
 	github.com/jchv/go-winloader v0.0.0-20210711035445-715c2860da7e // indirect
 	github.com/labstack/echo/v4 v4.13.3 // indirect
 	github.com/labstack/gommon v0.4.2 // indirect
